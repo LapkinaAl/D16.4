@@ -1,0 +1,19 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+<h1>Update article</h1>
+<div class="text animate__animated animate__fadeInUp" align="center">
+<h3>Post</h3>
+    <form method="post" action=""><font size="4">
+        {% csrf_token %}
+            {{ form.label_tag }}Post name{{ form.post_name }}<br>
+            {{ form.label_tag }}Author {{ form.post_author }}<br>
+            {{ form.label_tag }}Category {{ form.post_category }}<br>
+            {{ form.label_tag }}Text {{ form.post_text }}<br>
+            {{ form.label_tag }}Type {{ form.post_content }}<br>
+        <button type="submit">Create</button>
+        </font>
+    </form>
+    <br>
+</div>
+{% endblock content %}
